@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "query": "memo after:2026-09-29",
+  "messages": {
+    "total": 2,
+    "paging": {"count": 20, "total": 2, "page": 1, "pages": 1},
+    "matches": [
+      {
+        "type": "message",
+        "channel": {"id": "C01GENERAL", "name": "general"},
+        "user": "U01ALICE",
+        "username": "alice",
+        "ts": "1759228000.000100",
+        "text": "the memo: https://docs.example.com/memo",
+        "permalink": "https://example-team.slack.com/archives/C01GENERAL/p1759228000000100"
+      },
+      {
+        "type": "message",
+        "channel": {"id": "D01DM", "name": "U01ALICE"},
+        "user": "U03BOB",
+        "username": "",
+        "ts": "1759231000.000500",
+        "text": "memo looks good",
+        "permalink": "https://example-team.slack.com/archives/D01DM/p1759231000000500"
+      },
+      {"type": "message", "ts": "1759231000.000900", "text": "no channel, dropped"}
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+[workspace]
+
+[package]
+name = "slack-impersona"
+version = "0.1.0"
+edition = "2021"
+description = "A Rust client and CLI for Slack's Web API, authenticated with a browser session's token and cookie instead of a registered Slack app"
+license = "GPL-3.0-only"
+
+[lib]
+name = "slack_impersona"
+path = "src/lib.rs"
+
+[[bin]]
+name = "slack-impersona"
+path = "src/bin/slack-impersona.rs"
+
+[features]
+default = []
+# Enables `slack_impersona::send`, a typed library function for posting a
+# message. Deliberately not wired into the CLI: turning this on is a
+# decision made in your own Cargo.toml, not a flag this binary exposes.
+send = []
+
+[dependencies]
+anyhow = "1"
+chrono = { version = "0.4", default-features = false, features = ["std", "clock"] }
+clap = { version = "4", features = ["derive"] }
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "json", "rustls-tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "1"
+
+[dev-dependencies]
+tempfile = "3"
+
+[lints.clippy]
+too_many_lines = "warn"
+too_many_arguments = "warn"
+type_complexity = "warn"
