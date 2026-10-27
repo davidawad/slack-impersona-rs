@@ -16,9 +16,17 @@ them. It does not read browser state or automate a browser.
 ## Install
 
 ```sh
-cargo install --path .
-# or, to build only:
+cargo install --git https://github.com/davidawad/slack-impersona-rs
+# or, from a clone, to build only:
 cargo build --release
+```
+
+To use it as a library, depend on it from git (add `features = ["send"]` for
+`slack_impersona::send`):
+
+```toml
+[dependencies]
+slack-impersona = { git = "https://github.com/davidawad/slack-impersona-rs", tag = "v0.1.0" }
 ```
 
 ## Usage
