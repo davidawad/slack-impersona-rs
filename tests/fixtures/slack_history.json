@@ -1,0 +1,32 @@
+{
+  "ok": true,
+  "messages": [
+    {
+      "type": "message",
+      "user": "U02BOT",
+      "bot_id": "B01",
+      "subtype": "bot_message",
+      "username": "deploybot",
+      "text": "deploy &lt;prod&gt; done &amp; green: <https://ci.example.com/run/42|run 42>",
+      "ts": "1759230000.000300"
+    },
+    {
+      "type": "message",
+      "user": "U01ALICE",
+      "text": "reply in thread",
+      "ts": "1759229000.000200",
+      "thread_ts": "1759228000.000100"
+    },
+    {
+      "type": "message",
+      "user": "U01ALICE",
+      "text": "the memo is attached",
+      "ts": "1759228000.000100",
+      "reply_count": 2,
+      "files": [{"name": "memo.pdf", "permalink": "https://example-team.slack.com/files/U01ALICE/F1/memo.pdf"}]
+    },
+    {"type": "message", "subtype": "channel_join", "text": "no ts, dropped"}
+  ],
+  "has_more": false,
+  "response_metadata": {"next_cursor": ""}
+}
